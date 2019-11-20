@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Teras HOTSPOT</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500i,700%7CRoboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <link rel="stylesheet" href="plugins\swiper\swiper.min.css">
+    <link rel="stylesheet" href="plugins\magnific-popup\magnific-popup.min.css">
+    <link rel="stylesheet" href="plugins\color-switcher\color-switcher.css">
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\responsive.css">
+    <link rel="stylesheet" href="css\colors\theme-color-1.css">
+    <link rel="stylesheet" href="css\custom.css">
+</head>
+
+<body>
+    <div class="preLoader"></div>
+    <header class="header">
+        <div class="main-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-9">
+                        <div class="logo" data-animate="fadeInUp" data-delay=".7">
+                            <a href="login.html"> <img src="img/icon.png"> </a>
+                        </div>
+                    </div>
+                    <div class=" col-lg-7 col-md-5 col-sm-3 col-3">
+                        <nav data-animate="fadeInUp" data-delay=".9">
+                            <div class="header-menu">
+                                <ul>
+                                    <li><a href="login.html">Home</a></li>
+                                    <li><a href="status.html">Status</a></li>
+                                    <li class="active"><a href="logout.html?erase-cookie=true">Logout</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="position-relative bg-light pt-4 pb-4">
+        <div id="particles_js"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="banner-content">
+                        <div class="section-heading">
+                            <h5>
+                                <p>Selamat datang di layanan Teras Hotspot</p>
+                            </h5>
+                            <h1>Teras Hotspot Landing Page</h1>
+
+                        </div> <!-- .section-heading -->
+                        <h4 data-animate="fadeInUp" data-delay="1.4">Anda sudah Keluar dari layanan Hotspot</h4>
+                        </br>
+                    </div>
+                    <table class="table" data-animate="fadeInUp" data-delay="1.4">
+                        <tbody class="align-l">
+                            <tr>
+                                <td>Username</td>
+                                <td>$(username)</td>
+                            </tr>
+                            <tr>
+                                <td>IP Address</td>
+                                <td>$(ip)</td>
+                            </tr>
+                            <tr>
+                                <td>MAC Address</td>
+                                <td>$(mac)</td>
+                            </tr>
+                            $(if session-time-left)
+                            <tr>
+                                <td>Connected / left</td>
+                                <td>$(uptime) / $(session-time-left)</td>
+                            </tr>
+                            $(else)
+                            <tr>
+                                <td>Connected</td>
+                                <td>$(uptime)</td>
+                            </tr>
+                            $(endif)
+                            <tr>
+                                <td>Download / Upload</td>
+                                <td>$(bytes-out-nice) / $(bytes-in-nice)</td>
+                            </tr>
+                            $(if limit-bytes-total)
+                            <tr>
+                                <td>Sisa Kuota</td>
+                                <td>$(if limit-bytes-total)
+                                    <script language=javascript>
+                                        result = ($(limit - bytes - total) / 1000000).toFixed(2)
+                                        document.write(result)
+                                    </script> MiB
+                                    $(endif)
+                                    $(if limit-bytes-total == '')Unlimited$(endif)</td>
+                            </tr>
+                            $(else)
+                            <tr>
+                                <td>Sisa Kuota</td>
+                                <td>$(if limit-bytes-out)
+                                    <script language=javascript>
+                                        result = ($(limit - bytes - out) / 1000000).toFixed(2)
+                                        document.write(result)
+                                    </script> MiB
+                                    $(endif)
+                                    $(if limit-bytes-out == '')Unlimited$(endif)</td>
+                            </tr>
+                            $(endif)
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="banner-image"> <img src="img\saber.png" alt="" data-animate="fadeInUp" data-delay="1.4"
+                            data-depth="0.2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="services-title position-relative pt-7" data-bg-img="img/buildings.jpg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="section-title text-center">
+                            <h2 class="text-white" data-animate="fadeInUp" data-delay=".1">Service</h2>
+                            <p class="text-white" data-animate="fadeInUp" data-delay=".3">Internet Unlimated
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services-wrap bg-white position-relative pt-5 pb-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+
+                        <div class="roboto text-center font-weight-medium" data-animate="fadeInUp" data-delay=".65">
+                            <p>Jika ada pertanyaan silakan <a href="https://www.facebook.com/xzennt"
+                                    target="_blank">Edwin Ageng</a> atau
+                                <br>Whatsapp <a href="https://wa.me/6283861270513?text=ping"
+                                    target="_blank">083861270513</a></p>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <footer class="main-footer bg-primary pt-2">
+        <div class="container">
+            <div class="row" style="text-align: center;">
+                <div class="col-md-12">
+                    <div class="footer-info">
+                        <h3 class="text-white" data-animate="fadeInUp" data-delay="0">Kontak</h3>
+                        <br>
+                        <ul class="footer-contacts list-unstyled">
+                            <p data-animate="fadeInUp" data-delay=".15">email: <a href="mailto:edwinageng48@gmail.com"
+                                    target="_blank">edwinageng48@gmail.com</a></p>
+                            <p data-animate="fadeInUp" data-delay=".2">alamat: <a
+                                    href="https://goo.gl/maps/sEz658HtSmonfzD3A" target="_blank">Susukan Ngemplak
+                                    RT1/6,Kabupaten Semarang</a></p>
+                        </ul>
+                        <ul class="social-links list-inline mb-0">
+                            <li data-animate="fadeInUp" data-delay=".25"><a href="https://www.facebook.com/xzennt"
+                                    target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <div class="row">
+                    <div class="col-md-5 order-last order-md-first">
+
+                    </div>
+                    <div class="col-md-7 order-first order-md-last">
+                        <ul class="footer-menu list-inline text-md-right mb-md-0" data-animate="fadeInDown"
+                            data-delay=".95">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="back-to-top">
+        <a href="#"> <i class="fas fa-arrow-up"></i></a>
+    </div>
+    <script src="js\jquery-3.2.1.min.js"></script>
+    <script>
+        FontAwesomeConfig = {
+            searchPseudoElements: true
+        };
+    </script>
+    <script src="js\fontawesome-all.min.js"></script>
+    <script src="js\bootstrap.bundle.min.js"></script>
+    <script src="plugins\typed.js\typed.min.js"></script>
+    <script src="plugins\waypoints\jquery.waypoints.min.js"></script>
+    <script src="plugins\waypoints\sticky.min.js"></script>
+    <script src="plugins\swiper\swiper.min.js"></script>
+    <script src="plugins\particles.js\particles.min.js"></script>
+    <script src="plugins\particles.js\particles.settings.js"></script>
+    <script src="plugins\magnific-popup\jquery.magnific-popup.min.js"></script>
+    <script src="plugins\parsley\parsley.min.js"></script>
+    <script src="plugins\parallax\parallax.min.js"></script>
+    <script src="plugins\retinajs\retina.min.js"></script>
+    <script src="js\menu.min.js"></script>
+    <script src="js\scripts.js"></script>
+    <script src="js\custom.js"></script>
+
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <script type="text/javascript">
+        <!--
+        document.login.username.focus();
+        //
+        -->
+    </script>
+</body>
+
+</html>
